@@ -9,7 +9,7 @@ const getDocument = (req, res) => {
         result.toArray().then(lists => {
             res.setHeader("Content-Type", "application/json");
             res.status(200);
-            res.send(lists);
+            res.send(lists[0]);
         })
     } else {
         res.send(`Invalid query parameter: id = ${req.query.id}, ${id}`);
