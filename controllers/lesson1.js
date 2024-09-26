@@ -13,5 +13,5 @@ const mileyRoute = (req, res) => {
 module.exports = {
     charlesRoute,
     erinRoute,
-    mileyRoute
+    mileyRoute,
 };

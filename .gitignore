@@ -1,1 +1,5 @@
 node_modules
+.env
+team_lesson_01
+todoListApi
+addData.js
