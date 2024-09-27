@@ -1,0 +1,9 @@
+// LOCAL HOST
+###
+GET http://localhost:3000/contacts
+###
+GET http://localhost:3000/contacts?id=1
+###
+GET http://localhost:3000/contacts?id=2
+###
+GET http://localhost:3000/contacts?id=3
