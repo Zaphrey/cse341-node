@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Personal assignment contact portal</h1>
+    </header>
+    <main>
+        <form action="http://localhost:3000/contacts" , method="post">
+            <legend>Contact Information</legend>
+            <fieldset>
+                <label> First Name* <input type="text" name="fname" placeholder="First Name" required></label>
+                <label> Last Name* <input type="text" name="lname" placeholder="Last Name" required></label>
+                <label> Email <input type="email" name="email" placeholder="Email" required></label>
+                <label> Favorite Color <input type="text" name="favoritecolor" placeholder="Favorite Color"
+                        required></label>
+                <label> Birthdate <input type="date" name="birthday" required></label>
+            </fieldset>
+            <input type="submit" value="Add This Applicant">
+        </form>
+    </main>
+</body>
+
+</html>

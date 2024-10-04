@@ -7,3 +7,29 @@ GET http://localhost:3000/contacts?id=1
 GET http://localhost:3000/contacts?id=2
 ###
 GET http://localhost:3000/contacts?id=3
+### 
+POST http://localhost:3000/contacts?fName=Zachary&lName=Humphreys&email=zachary.humphreys32@gmail.com&favoriteColor=Purple&birthday=05/10/2004
+###
+PUT http://localhost:3000/contacts/4?favoriteColor=Green
+###
+GET http://localhost:3000/contacts/4
+### 
+DELETE http://localhost:3000/contacts/4
+// RENDER
+###
+GET https://cse341-node-hjxg.onrender.com/contacts
+###
+GET https://cse341-node-hjxg.onrender.com/contacts?id=1
+###
+GET https://cse341-node-hjxg.onrender.com/contacts?id=2
+###
+GET https://cse341-node-hjxg.onrender.com/contacts?id=3
+### 
+POST https://cse341-node-hjxg.onrender.com/contacts?fName=Zachary&lName=Humphreys&email=zachary.humphreys32@gmail.com&favoriteColor=Purple&birthday=05/10/2004
+###
+PUT https://cse341-node-hjxg.onrender.com/contacts/4?favoriteColor=Green
+###
+GET https://cse341-node-hjxg.onrender.com/contacts/4
+### 
+DELETE https://cse341-node-hjxg.onrender.com/contacts/4
+                             

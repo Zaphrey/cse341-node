@@ -9,6 +9,7 @@ db.initDb((err, mongodb) => {
     if (err) {
         console.log(err);
     } else {
+        app.use(express.urlencoded({ extended: true }));
         app.use((req, res, next) => {
             res.setHeader("Access-Control-Allow-Origin", "*");
             res.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST");
@@ -19,7 +20,7 @@ db.initDb((err, mongodb) => {
         app.use("/", require("./routes/index"));
 
         app.listen(port, () => {
-            console.log(`Server is listning at port ${port}`);
+            console.log(`Server is listening at port ${port}`);
         })
     }
 });
