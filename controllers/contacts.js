@@ -1,7 +1,6 @@
 const mongodb = require("../database/mongodb");
 
 const getDocuments = (req, res) => {
-    console.log(req.params.id)
     let result = mongodb.getDb().db("cse341").collection("contacts").find();
 
     result.toArray().then(lists => {
@@ -11,7 +10,6 @@ const getDocuments = (req, res) => {
 }
 
 const getDocument = (req, res) => {
-    console.log(req.params.id)
     let result = mongodb.getDb().db("cse341").collection("contacts").find({ id: Number(req.params.id) });
     result.toArray().then(lists => {
         if (lists.length > 0) {
@@ -44,7 +42,6 @@ const addDocument = async (req, res) => {
     let email = req.query.email;
     let favoriteColor = req.query.favoriteColor;
     let birthday = req.query.birthday;
-    console.log(userId)
 
     if (fName && lName && email && favoriteColor && birthday) {
         let userData = {
@@ -92,8 +89,6 @@ const updateDocument = (req, res) => {
 const removeDocument = (req, res) => {
     let userData = mongodb.getDb().db("cse341").collection("contacts").find({ id: Number(req.params.id) });
     (userData.toArray().then(lists => {
-        console.log(lists)
-
         for (data in lists) {
             mongodb.getDb().db("cse341").collection("contacts").deleteOne({ id: Number(req.params.id) });
             res.status(200).send("Successfully deleted contact")
