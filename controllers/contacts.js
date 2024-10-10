@@ -38,7 +38,7 @@ const addDocument = async (req, res) => {
     // that no duplicate ids get added to the database.
 
     let fName = req.query.firstName;
-    let lName = req.query.firstName;
+    let lName = req.query.lastName;
     let email = req.query.email;
     let favoriteColor = req.query.favoriteColor;
     let birthday = req.query.birthday;
