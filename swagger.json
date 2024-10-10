@@ -1,0 +1,188 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Base/Charles route",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/erin": {
+      "get": {
+        "description": "Erin route",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/miley": {
+      "get": {
+        "description": "Miley route",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/contacts/{id}": {
+      "get": {
+        "description": "Gets contact information from the specified contact ID.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "Updates a contact from the specified contact ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "updated fName",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "updated lName",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "updated email",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "updated favoriteColor",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "updated birthday",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "Deletes a contact with the specified contact ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/contacts": {
+      "get": {
+        "description": "Returns a list of all contacts in the database.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "Creates a new contact from the required information.",
+        "parameters": [
+          {
+            "name": "fName",
+            "in": "query",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "lName",
+            "in": "query",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "favoriteColor",
+            "in": "query",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "birthday",
+            "in": "query",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  }
+}
