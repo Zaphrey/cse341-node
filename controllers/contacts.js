@@ -56,7 +56,7 @@ const addDocument = async (req, res) => {
         mongodb.getDb().db("cse341").collection("contacts").insertOne(userData)
         res.status(201).send(`New user created. ID: ${userId}`);
     } else {
-        res.status(400).send("Missing parameter content")
+        res.status(400).send(`Missing parameter content ${req.query}`)
     };
 };
 
