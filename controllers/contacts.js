@@ -37,11 +37,11 @@ const addDocument = async (req, res) => {
     // So for now, data just needs to be inputted carefully to ensure
     // that no duplicate ids get added to the database.
 
-    let fName = req.body.firstName;
-    let lName = req.body.lastName;
-    let email = req.body.email;
-    let favoriteColor = req.body.favoriteColor;
-    let birthday = req.body.birthday;
+    let fName = req.query.fName;
+    let lName = req.query.lName;
+    let email = req.query.email;
+    let favoriteColor = req.query.favoriteColor;
+    let birthday = req.query.birthday;
 
     if (fName && lName && email && favoriteColor && birthday) {
         let userData = {
@@ -56,7 +56,7 @@ const addDocument = async (req, res) => {
         mongodb.getDb().db("cse341").collection("contacts").insertOne(userData)
         res.status(201).send(`New user created. ID: ${userId}`);
     } else {
-        res.status(400).send(`Missing parameter content ${JSON.stringify(req.body)}`)
+        res.status(400).send("Missing parameter content")
     };
 };
 
