@@ -74,27 +74,27 @@
             "type": "string"
           },
           {
-            "name": "updated fName",
+            "name": "fName",
             "in": "query",
             "type": "string"
           },
           {
-            "name": "updated lName",
+            "name": "lName",
             "in": "query",
             "type": "string"
           },
           {
-            "name": "updated email",
+            "name": "email",
             "in": "query",
             "type": "string"
           },
           {
-            "name": "updated favoriteColor",
+            "name": "favoriteColor",
             "in": "query",
             "type": "string"
           },
           {
-            "name": "updated birthday",
+            "name": "birthday",
             "in": "query",
             "type": "string"
           }
