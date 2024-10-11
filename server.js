@@ -11,7 +11,7 @@ db.initDb((err, mongodb) => {
     } else {
         app.use(express.urlencoded({ extended: true }));
         app.use((req, res, next) => {
-            res.setHeader("Access-Control-Allow-Origin", "https://cse341-node-hjxg.onrender.com");
+            res.setHeader("Access-Control-Allow-Origin", "*");
             res.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
             res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
             next();
