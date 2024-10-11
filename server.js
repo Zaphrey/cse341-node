@@ -10,7 +10,12 @@ db.initDb((err, mongodb) => {
     if (err) {
         console.log(err);
     } else {
-        app.use(cors());
+        app.use((req, res, next) => {
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            res.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+            res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            next();
+        });
         app.use(express.urlencoded({ extended: true }));
         app.use(bodyParser.json());
         app.use("/", require("./routes/index"));
