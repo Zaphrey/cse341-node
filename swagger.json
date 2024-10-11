@@ -8,7 +8,7 @@
   "host": "https://cse341-node-hjxg.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
